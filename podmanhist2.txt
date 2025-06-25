@@ -1,0 +1,206 @@
+    1  sudo vim /etc/yum.repos.d/localftp.repo 
+    2  sudo dnf repolist
+    3  sudo dnf list
+    4  exit
+    5  su - root
+    6  exit
+    7  vim /etc/yum.repos.d/localftp.repo 
+    8  sudo dnf repolist
+    9  sudo dnf list
+   10  exit
+   11  sudo nmtui
+   12  sudo reboot
+   13  sudo restart
+   14  hostnamectl 
+   15  sudo systemctl enable --now cockpit.socket 
+   16  suod visudo
+   17  sudo visudo
+   18  exit
+   19  sudo visudo
+   20  sudo fdisk -l
+   21  fdisk -l
+   22  exit
+   23  lsblk
+   24  exit
+   25  ll
+   26  cat known_hosts
+   27  cd
+   28  ll
+   29  w
+   30  ssh parrot@fe80::5054:ff:fe74:74b6
+   31  ping6 -c 4 fe80::5054:ff:fe74:74b6
+   32  ip a
+   33  ping6 -c 4 fe80::fc54:ff:fe74:74b6
+   34  ping -c 4 192.168.122.90
+   35  ip a
+   36  sudo nmtui
+   37  ip a
+   38  ping6 -c 4 fd00::121
+   39  ip a
+   40  ping6 -c 4 fd00::121
+   41  ping6 -c 4 fd00::120
+   42  su - root
+   43  exit
+   44  ip a
+   45  ifconfig
+   46  cls
+   47  clear
+   48  ip a
+   49  ssh bikash@192.168.122.180
+   50  ll
+   51  ll -a
+   52  cd .ssh
+   53  ll
+   54  cat known_hosts
+   55  ssh bikash@192.168.122.180
+   56  exit
+   57  history > Day2activity.txt
+   58  su - root
+   59  history
+   60  ls
+   61  dnf list git
+   62  sudo dnf install -y git
+   63  cd /etc/yum.repos.d
+   64  ll
+   65  cat localftp.repo
+   66  cd /var/log
+   67  ls
+   68  sudo less dnf.log
+   69  sudo tail -20 dnf.log
+   70  cd -
+   71  less redhat.repo 
+   72  sudo dnf list podman
+   73  sudo dnf list qemu-kvm
+   74  sudo dnf list libvirtd
+   75  sudo dnf list libvirt
+   76  sudo systemctl status libvirtd
+   77  d
+   78  cd
+   79  git clone https://github.com/BikashGHub1/DO180-apps.git
+   80  ls
+   81  cd DO180-apps/
+   82  git status
+   83  ls
+   84  head README.md 
+   85  cd ~
+   86  sudo podman images
+   87  sudo podman ps
+   88  sudo podman search rhel
+   89  cd /etc/containers/
+   90  ll
+   91  less registries.conf
+   92  sudo podman pull rhel
+   93  sudo podman images
+   94  sudo podman ps
+   95  sudo podman run -it registry.access.redhat.com/rhel /bin/bash
+   96  sudo podman ps
+   97  sudo podman ps -a
+   98  sudo podman run -d registry.access.redhat.com/rhel /bin/bash
+   99  sudo podman ps
+  100  sudo podman ps -a
+  101  sudo podman inspect -l -f "{{NetworkSettings.IPAddresses}}"
+  102  sudo podman run -d registry.access.redhat.com/rhel 
+  103  sudo podman ps
+  104  sudo podman run -d rhscl/httpd-24-rhel7:2.4-36.8
+  105  sudo podman inspect -l -f "{{NetworkSettings.IPAddresses}}"
+  106  sudo podman inspect -l > -f "{{NetworkSettings.IPAddresses}}"
+  107  sudo podman inspect -l >
+  108* sudo podman inspect -l | grip 
+  109  sudo podman inspect -l \ > -f "{{NetworkSettings.IPAddresses}}"
+  110  sudo podman inspect -l  -f "{{NetworkSettings.IPAddress}}"
+  111  sudo podman inspect -l | grep IPA
+  112  curl http://10.88.0.5:8080
+  113  sudo podman ps
+  114  sudo podman ps -a
+  115  sudo podman images
+  116  sudo podman exec -it registry.access.redhat.com/rhscl/httpd-24-rhel7 /bin/bash
+  117  sudo podman exec -it agitated_feistel /bin/bash
+  118  ip a
+  119  sudo podman run --name bikash-httpd -d rhscl/httpd-24-rhel7
+  120  sudo podman images
+  121  sudo podman ps
+  122  sudo podman -l
+  123  sudo podman inspect -l
+  124  sudo podman inspect -l | grep IPA
+  125  ip a
+  126  podman ps -a
+  127  sudo podman ps -a
+  128  http://10.88.0.5:8080/
+  129  sudo podman run --name mysql-basic -e MSQL_USER=user1 -e MYSQL_PASSWORD=mypa55-e MYSQL_DATABASE=items -e MYSQL_ROOT_PASSWORD=r00tpa55-d rhscl/mysql-57-rhel7:5.7-3.14
+  130  sudo podman run --name mysql-basic -e MSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=items -e MYSQL_ROOT_PASSWORD=r00tpa55-d rhscl/mysql-57-rhel7:5.7-3.14
+  131  sudo podman ps --format "{{.ID}}{{.Image}}{{.Names}}"
+  132  sudo podman exec -it mysql-basic /bin/bash
+  133  sudo podman run --name mysql-basic -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55-e MYSQL_DATABASE=items -e MYSQL_ROOT_PASSWORD=r00tpa55 -d rhscl/mysql-57-rhel7:5.7-3.14
+  134  sudo podman run --name mysql-basic -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=items -e MYSQL_ROOT_PASSWORD=r00tpa55 -d rhscl/mysql-57-rhel7:5.7-3.14
+  135  sudo podman stop mysql-basic
+  136  sudo podman images
+  137  sudo podman rm mysql-basic
+  138  sudo podman images
+  139  sudo podman image prune
+  140  sudo podman images
+  141  sudo podman container prune
+  142  sudo podman images
+  143  sudo podman rmi registry.access.redhat.com/rhscl/mysql-57-rhel7
+  144  sudo podman rmi 4ae3a3f4f409
+  145  sudo podman images
+  146  sudo podman run --name mysql-basic -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=items -e MYSQL_ROOT_PASSWORD=r00tpa55 -d rhscl/mysql-57-rhel7:5.7-3.14
+  147  sudo podman ps --format "{{.ID}}{{.Image}}{{.Names}}"
+  148  sudo podman ps --format "{{.ID}}  {{.Image}}  {{.Names}}"
+  149  sudo podman exec -it mysql-basic /bin/bash
+  150  sudo podman logs mysql-basic
+  151  sudo podman logs mysql-basic | less
+  152  cd /var/lib
+  153  ll
+  154  cd containers/
+  155  ls
+  156  tree | less
+  157  cd storage
+  158  ll
+  159  sudo tree | less
+  160  sudo cd overlay-containers
+  161  su
+  162  cd
+  163  history
+  164  history | grep inspect
+  165  sudo podman inspect -l  -f "{{NetworkSettings.IPAddress}}"
+  166  sudo podman inspect -l  -f "{{NetworkSettings.IPAddress}}" mysql-basic
+  167  sudo podman inspect  -f "{{NetworkSettings.IPAddress}}" mysql-basic
+  168  sudo podman inspect -f '{{NetworkSettings.IPAddress}}' mysql-basic
+  169  sudo podman inspect -f '{{.NetworkSettings.IPAddress}}' mysql-basic
+  170  sudo podman inspect -l  -f "{{.NetworkSettings.IPAddress}}" mysql-basic
+  171  sudo podman inspect -f "{{.NetworkSettings.IPAddress}}" mysql-basic
+  172  sudo podman pa -a
+  173  sudo podman ps -a
+  174  mysql --help
+  175  sudo dnf install -y mysql
+  176  mysql -u user1 -h 10.88.0.8 -p items
+  177  sudo podman images
+  178  sudo podman run --name vinay-mysql -it rhscl/mysql-57-rhel7 /bin/bash 
+  179  sudo podman ps -a --format="table {{.ID}} {{.Names}} {{.Status}}"
+  180  sudo podman exec mysql-basic /bin/bash -c 'mysql -u user1 -p -e "select * from items.Projects;"'
+  181  sudo podman exec mysql /bin/bash -c 'mysql -u user1 -p -e "select * from items.Projects;"'
+  182  sudo podman ps -a
+  183  sudo podman exec mysql /bin/bash -c 'mysql -u user1 -p -e "select * from item.Projects;"'
+  184  sudo podman exec mysql-basic /bin/bash -c 'mysql -u user1 -p -e "select * from item.Projects;"'
+  185  sudo podman exec mysql-basic /bin/bash -c 'mysql -u root -e "select * from items.Projects;"'
+  186  history > podmanhist.txt
+  187  sudo mkdir -pv /var/local/mysql
+  188  sudo ll -Z /var/local
+  189  sudo ls -Z /var/local
+  190  cd /var/ftp/pub
+  191  ls
+  192  su 
+  193  sudo semanage fcontext -a -t container_file_t '/var/local/mysql(/.*)?'
+  194  sudo restorecon -R /var/local/mysql
+  195  ls -dZ /var/local/mysql
+  196  sudo cat /etc/passwd
+  197  sudo chown -Rv 27:27 /var/local/mysql
+  198  sudo podman run --name persist-db -d -v /var/local/mysql:/var/lib/mysql/data -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=items -e MYSQL_ROOT_PASSWORD=r00tpa55 -d rhscl/mysql-57-rhel7
+  199  history
+  200  sudo podman ps -a --format="table {{.ID}} {{.Names}} {{.Status}}"
+  201  cd /var/local/mysql
+  202  ll
+  203  cd items
+  204  su 
+  205  cd
+  206  history > podmanhist2.txt
